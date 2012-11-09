@@ -29,7 +29,7 @@ iab sout System.out.println();<LEFT><LEFT>
 iab serr System.err.println();<LEFT><LEFT>
 ":map [F5] [ESC]:!ant . > BUILD_LOG<CR>:e BUILD_LOG
 "Compiling java
-autocmd Filetype java set makeprg=javac\ \-d\ ~/Poo/bin/\ %
+autocmd Filetype java set makeprg=javacbin\ %
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%Csymbol\ \ :\ %m,%-C%.%#
 map <F9> :make<Return>:copen<Return>
 map <F10> :cprevious<Return>
