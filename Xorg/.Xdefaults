@@ -1,0 +1,30 @@
+Xft.dpi:                    96
+Xft.hinting:                1 
+Xft.hintstyle:              hintfull 
+Xft.antialias:              1 
+Xft.rgba:                   rgb
+
+!urxvt.font: xft:Terminus:pixelsize=14
+urxvt.loginShell: True
+urxvt.visualBell: True
+URxvt*font: xft:DejaVu Sans Mono-11
+#urxvt.font: -*-mono-medium-*-*-*-9-*-*-*-*-*-*-*
+#urxvt.font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--14-*-*-*-*-*-iso10646-1
+urxvt.realBold: True
+urxvt.transparent: True
+urxvt.shading: 30
+!urxvt.inheritPixmap: True
+urxvt.background: #000000
+urxvt.foreground: #bbbbbb
+urxvt.tintColor: #000000
+urxvt.scrollBar: false
+urxvt.internalBorder: 3
+urxvt.externalBorder: 0
+urxvt.saveLines: 10000
+urxvt.jumpScroll: false
+urxvt.multiScroll: true
+urxvt.geometry: 100x60+10+10
+urxvt.perl-ext: selection,searchable-scrollback,matcher
+urxvt.urlLauncher: firefox
+urxvt.cursorBlink: true
+urxvt.pointerBlankDelay: 0

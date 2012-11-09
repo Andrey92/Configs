@@ -1,0 +1,5 @@
+Theme		= /home/andrey/.moc/darkblue
+ShowHiddenFiles	= no
+ReadTags	= yes
+Shuffle		= yes
+AlsaDevice	= default
