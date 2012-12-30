@@ -19,6 +19,15 @@ set mouse=a
 set viminfo='0,:0,f0,/0 "~/.viminfo
 set number
 
+"Set options for LaTeX
+ set grepprg=grep\ -nH\ $*
+ let g:tex_flavor='latex'
+
+"Set interactive bash mode (needed in order to recognize aliases) 
+set shell=/bin/bash\ -l
+set shellcmdflag=-ic
+set shellpipe=>%s\ 2>&1
+
 "Tips for Java programming
 autocmd Filetype java set cfu=VjdeCompletionFun
 "autocmd Filetype java setlocal omnifunc=javacomplete#Complete
@@ -29,9 +38,9 @@ iab sout System.out.println();<LEFT><LEFT>
 iab serr System.err.println();<LEFT><LEFT>
 ":map [F5] [ESC]:!ant . > BUILD_LOG<CR>:e BUILD_LOG
 "Compiling java
-autocmd Filetype java set makeprg=javacbin\ %
+autocmd Filetype java set makeprg=javac\ -d\ ./bin\ %
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%Csymbol\ \ :\ %m,%-C%.%#
-map <F9> :make<Return>:copen<Return>
+map <F9> :make<Return>:copen<Return><Return>
 map <F10> :cprevious<Return>
 map <F11> :cnext<Return>
 

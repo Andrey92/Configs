@@ -1,5 +1,3 @@
-# File ~/.bash_profile
-
 sprunge() {
 	cat $1 | curl -F 'sprunge=<-' http://sprunge.us
 }
@@ -22,11 +20,13 @@ then
 	mkdir ./bin
 fi
 javac -d ./bin'
-alias apidocs='firefox ~/Repos/UniLab/POO/docs/api/index.html'
+alias apidocs='firefox ~/Dev/UniLab/POO/docs/api/index.html'
 alias eclipse='/usr/local/bin/eclipse/eclipse'
 
 export LD_LIBRARY_PATH=/opt/oracle-jdk-bin-1.7.0.3/jre/lib/amd64
+
 alias minecraft='java -Xmx1024M -Xms512M -cp ~/.minecraft/MinecraftSP.jar net.minecraft.LauncherFrame'
+alias minecraft_server='java -Xmx1024M -Xms1024M -jar ~/.minecraft/minecraft_server/minecraft_server.jar'
 
 alias wiunical='~/.wiunical/UNICAL_Campus_Access.sh'
 alias martensson_wifi='~/.wiunical/Martensson_WiFi.sh'

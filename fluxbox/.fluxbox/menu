@@ -45,6 +45,7 @@
 			[exec] (DropBox) {dropbox}
 			[exec] (GQview) {gqview}
 			[exec] (Gimp) {gimp}
+			[exec] (Graphing) {~/.graph/graph.sh}
 		[end]
 		[submenu] (System Tools)
 			[exec] (HTop) {urxvt -geometry 75x25 -e htop}

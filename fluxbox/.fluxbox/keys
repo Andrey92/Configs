@@ -14,12 +14,12 @@ OnDesktop Mouse2 :WorkspaceMenu
 OnDesktop Mouse3 :RootMenu
 
 # scroll on the desktop to change workspaces
-OnDesktop Mouse4 :NextWorkspace
-OnDesktop Mouse5 :PrevWorkspace
+OnDesktop Mouse4 :PrevWorkspace
+OnDesktop Mouse5 :NextWorkspace
 
 # scroll on the toolbar to change workspaces
-OnToolbar Mouse4 :NextWorkspace
-OnToolbar Mouse5 :PrevWorkspace
+OnToolbar Mouse4 :PrevWorkspace
+OnToolbar Mouse5 :NextWorkspace
 
 # alt + left/right click to move/resize a window
 OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
@@ -64,6 +64,9 @@ Mod1 u	:Exec urxvt -geometry 80x25
 Mod1 r	:Exec urxvt -geometry 80x25 -e su -
 Mod1 f	:Exec firefox
 Mod1 t	:Exec thunderbird
+Mod1 e	:Exec /usr/local/bin/eclipse/eclipse
+Mod1 g	:Exec ~/.graph/graph.sh
+Mod1 d	:Exec dropbox
 Mod1 i	:ExecCommand urxvt -geometry 120x35 -e irssi
 Mod1 v	:ExecCommand urxvt -e vim
 Mod1 m	:ExecCommand urxvt -geometry 100x25 -e mocp
@@ -78,8 +81,8 @@ Mod1 a	:ExecCommand urxvt -geometry 100x30 -e alsamixer
 
 # current window commands
 Mod1 F4 :Close
-Mod1 F9 :Minimize
-Mod1 F10 :Maximize
+Mod1 F5 :Minimize
+Mod1 F6 :Maximize
 #Mod1 F11 :Fullscreen20
 # open the window menu
 Mod1 space :WindowMenu
