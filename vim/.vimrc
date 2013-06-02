@@ -33,7 +33,7 @@ autocmd Filetype java set cfu=VjdeCompletionFun
 "autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 ":inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P>
 iab psvm public static void main(String[]args) { }<UP><END><BS><BS>
-iab eqls public boolean equals(Object o) {<CR>if (!(o instanceof Type)) return false;<CR>if (o == this) return true;<CR>Type t = (Type)o;<CR>return ;<CR>} // equals<UP>
+iab eqls public boolean equals(Object o) {<CR>if (!(o instanceof Type)) return false;<CR>if (o == this) return true;<CR>Type t = (Type)o;<CR>return ;<CR>}<UP>
 iab sout System.out.println();<LEFT><LEFT>
 iab serr System.err.println();<LEFT><LEFT>
 ":map [F5] [ESC]:!ant . > BUILD_LOG<CR>:e BUILD_LOG
@@ -44,7 +44,23 @@ map <F9> :make<Return>:copen<Return><Return>
 map <F10> :cprevious<Return>
 map <F11> :cnext<Return>
 
-autocmd FileType c,cpp,html,css,javascript,php,java,ruby,python,perl,sh let g:SuperTabDisabled=0
+"If you would like to manually place cursors by moving your cursor above each location and pressing a keybinding, set the keybinding like so, setting {keys} as desired:
+nnoremap <c-LeftMouse> :<c-u>call MultiCursorPlaceCursor()<cr>
+
+"To actually utilize these manually placed cursors you will need to call another mapping:
+nnoremap <c-i> :<c-u>call MultiCursorManual()<cr>
+
+"If you would like to cancel manually placed cursors without utilizing them:
+nnoremap <c-w> :<c-u>call MultiCursorRemoveCursors()<cr>
+
+"You can also create cursors from visual mode:
+xnoremap <c-LeftMouse> :<c-u>call MultiCursorVisual()<cr>
+
+"Finally, you should set a keybinding to stop using multiple cursors (and fall back to the normal single cursor) like so:
+let g:multicursor_quit = "<c-u>"
+
+
+autocmd FileType c,cpp,html,css,javascript,php,java,ruby,python,perl,sh,xml let g:SuperTabDisabled=0
 
 colorscheme mycolors "~/.vim/colors/mycolors.vim
 
