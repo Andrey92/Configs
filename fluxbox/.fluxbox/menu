@@ -28,7 +28,7 @@
 			[exec] (Moc) {urxvt -geometry 100x25 -e mocp}
 			[exec] (Mixer) {urxvt -geometry 100x30 -e alsamixer}
 			[exec] (Equal) {urxvt -geometry 100x30 -e alsamixer -D equal}
-			[exec] (Minecraft) {java -Xmx1024M -Xms512M -cp ~/.minecraft/MinecraftSP.jar net.minecraft.LauncherFrame}
+			[exec] (Minecraft) {echo "installation_dir=/home/andrey/.minecraft" > ~/MOL_Properties.properties && java -jar ~/.minecraft/MC_Open_Launcher.jar && rm ~/MOL_Properties.properties}
 			[exec] (DVDRip) {dvdrip}
  		[end]
 		[submenu] (Office)
@@ -42,6 +42,7 @@
 			[exec] (Eclipse) {/usr/local/bin/eclipse/eclipse}
 			[exec] (VirtualBox) {VirtualBox}
 			[exec] (TeamViewer) {~/.teamviewer7/teamviewer7/teamviewer}
+			[exec] (Matlab) {matlab}
 			[exec] (DropBox) {dropbox}
 			[exec] (GQview) {gqview}
 			[exec] (Gimp) {gimp}

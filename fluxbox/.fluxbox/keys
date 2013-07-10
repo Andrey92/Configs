@@ -72,6 +72,7 @@ Mod1 v	:ExecCommand urxvt -e vim
 Mod1 m	:ExecCommand urxvt -geometry 100x25 -e mocp
 Mod1 w	:ExecCommand VirtualBox
 Mod1 a	:ExecCommand urxvt -geometry 100x30 -e alsamixer
+Mod1 l	:ExecCommand matlab
 Print	:ExecCommand scrot
 
 # volume settings, using common keycodes

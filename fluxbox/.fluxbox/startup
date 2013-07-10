@@ -8,7 +8,7 @@
 #xmodmap "/root/.Xmodmap"
 
 # Set the background image
-wpsetters=feh fbsetbg ~/.fluxbox/backgrounds/gentoo.jpg
+#wpsetters=feh fbsetbg ~/.fluxbox/backgrounds/gentoogray.jpg
 
 #Set X variables
 DISPLAY=:0.0 
@@ -33,6 +33,9 @@ xset +fp /usr/share/fonts/75dpi
 # wmnd &
 # wmsmixer -w &
 # idesk &
+
+# Start the composite manager for visual effects
+xcompmgr -c &
 
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.

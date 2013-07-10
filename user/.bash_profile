@@ -11,9 +11,23 @@ alias poweroff='sudo /sbin/poweroff'
 alias reboot='sudo /sbin/reboot'
 alias pppd='sudo /usr/sbin/pppd'
 
-alias ll='ls -la'
+alias performance='
+echo 15 > /sys/class/backlight/acpi_video1/brightness
+cpufreq-set -c 0 -g performance
+cpufreq-set -c 1 -g performance
+cpufreq-set -c 2 -g performance
+cpufreq-set -c 3 -g performance
+cpufreq-set -c 4 -g performance
+cpufreq-set -c 5 -g performance
+cpufreq-set -c 6 -g performance
+cpufreq-set -c 7 -g performance'
 
-export CLASSPATH=.:./bin
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ll='ls -la'
+alias child='urxvt -geometry 80x25 & '
+
+export CLASSPATH=.:./bin:/usr/lib64/jvm/oracle-jdk-bin-1.7/jre/lib/jfxrt.jar:/home/andrey/db/mysql-connector-java-5.1.24-bin.jar
 alias javacbin='
 if [ ! -e ./bin ]
 then
@@ -23,10 +37,21 @@ javac -d ./bin'
 alias apidocs='firefox ~/Dev/UniLab/POO/docs/api/index.html'
 alias eclipse='/usr/local/bin/eclipse/eclipse'
 
+alias makenasm=nasm_compile
+
+nasm_compile() {
+	nasm -f elf32 $1
+	ld -m elf_i386 ${1%.*}.o -o ${1%.*}
+	rm ${1%.*}.o
+}
+
 export LD_LIBRARY_PATH=/opt/oracle-jdk-bin-1.7.0.3/jre/lib/amd64
 
-alias minecraft='java -Xmx1024M -Xms512M -cp ~/.minecraft/MinecraftSP.jar net.minecraft.LauncherFrame'
-alias minecraft_server='java -Xmx1024M -Xms1024M -jar ~/.minecraft/minecraft_server/minecraft_server.jar'
+alias minecraft='
+echo "installation_dir=/home/andrey/.minecraft" > ~/MOL_Properties.properties
+java -jar ~/.minecraft/MC_Open_Launcher.jar
+rm ~/MOL_Properties.properties'
+#alias minecraft_server='java -Xmx1024M -Xms1024M -jar ~/.minecraft/minecraft_server/minecraft_server.jar'
 
 alias wiunical='~/.wiunical/UNICAL_Campus_Access.sh'
 alias martensson_wifi='~/.wiunical/Martensson_WiFi.sh'

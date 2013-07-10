@@ -3,4 +3,5 @@
   [Layer]	{2}
 [end]
 [app] (name=urxvt) (class=URxvt)
+	[Alpha] {230 180}
 [end]
