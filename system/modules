@@ -18,4 +18,4 @@
 # You should consult your kernel documentation and configuration
 # for a list of modules and their options.
 
-modules="i915 cfbcopyarea cfbfillrect cfbimgblt fb_ddc intelfb wmi dell-wmi dell-laptop iwlagn mac80211 cfg80211 scsi_wait_scan xt_mark snd-seq-oss snd-seq-device snd-seq-midi-event snd-seq-dummy snd-seq snd-pcm-oss snd-mixer-oss snd-hrtimer snd-hwdep snd snd-timer snd-pcm snd-page-alloc snd-hda-codec snd-hda-codec-analog snd-hda-codec-hdmi snd-hda-codec-realtek snd-hda-intel soundcore snd-usb-audio snd-usbmidi-lib vboxdrv vboxnetflt vboxnetadp bsd_comp ppp_async ppp_deflate ppp_mppe ppp_synctty rt2800usb i2c-dev"
+modules="i915 cfbcopyarea cfbfillrect cfbimgblt fb_ddc intelfb wmi dell-wmi dell-laptop mac80211 cfg80211 xt_mark snd-seq-oss snd-seq-device snd-seq-midi-event snd-seq-dummy snd-seq snd-pcm-oss snd-mixer-oss snd-hrtimer snd-hwdep snd snd-timer snd-pcm snd-page-alloc snd-hda-codec snd-hda-codec-analog snd-hda-codec-hdmi snd-hda-codec-realtek snd-hda-intel soundcore snd-usb-audio sdhci vboxdrv vboxnetflt vboxnetadp bsd_comp ppp_async ppp_deflate ppp_mppe ppp_synctty rt2800usb i2c-dev"

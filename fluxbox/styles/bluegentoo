@@ -7,82 +7,82 @@
 #background.modY:
 
 background: aspect
-background.pixmap: ~/.fluxbox/backgrounds/ice.jpg
+background.pixmap: ~/.fluxbox/backgrounds/bluegentoo.jpg
 
 toolbar:                            raised solid
-toolbar.color:                      #051a2b
+toolbar.color:                      #003899
 toolbar.height:			    21
 
 toolbar.button:                     parentrelative
-toolbar.button.picColor:            #3aa0c8
+toolbar.button.picColor:            #7295cf
 toolbar.button.pressed:             raised solid
-toolbar.button.pressed.color:       #051a2b
+toolbar.button.pressed.color:       #003899
 
 toolbar.label:                      sunken
-toolbar.label.color:                #051a2b
+toolbar.label.color:                #003899
 toolbar.label.textColor:            #b2b2b2
 
 toolbar.windowLabel:                sunken
-toolbar.windowLabel.color:          #051a2b
+toolbar.windowLabel.color:          #003899
 toolbar.windowLabel.textColor:      #b2b2b2
 
 toolbar.clock:                      sunken
-toolbar.clock.color:                #051a2b
+toolbar.clock.color:                #003899
 toolbar.clock.textColor:            #b2b2b2
 
 menu.title:                         flat
-menu.title.color:                   #051a2b
+menu.title.color:                   #003899
 menu.title.textColor:               #b2b2b2
 menu.title.justify:                 center
 
 menu.frame:                         flat solid bevel1
-menu.frame.color:                   #051a2b
+menu.frame.color:                   #003899
 menu.frame.textColor:               #b2b2b2
 menu.frame.justify:                 left
 
 menu.hilite:                        flat solid bevel1
 menu.hilite.textColor:              #ffffff
-menu.hilite.color:                  #3aa0c8
+menu.hilite.color:                  #7295cf
 
 menu.bullet:                        triangle
 menu.bullet.position:               right
 
 window.title.height:		    22
 window.title.focus:                 flat solid
-window.title.focus.color:           #051a2b
+window.title.focus.color:           #003899
 window.title.unfocus:               flat solid
-window.title.unfocus.color:         #051a2b
+window.title.unfocus.color:         #003899
 
 window.label.focus:                 flat
-window.label.focus.color:           #051a2b
+window.label.focus.color:           #003899
 window.label.focus.textColor:       #b2b2b2
 window.label.unfocus:               flat solid
-window.label.unfocus.color:         #051a2b
-window.label.unfocus.textColor:     #3aa0c8
+window.label.unfocus.color:         #003899
+window.label.unfocus.textColor:     #7295cf
 
 window.handle.focus:                flat solid
-window.handle.focus.color:          #3aa0c8
+window.handle.focus.color:          #7295cf
 window.handle.unfocus:              flat solid
-window.handle.unfocus.color:        #3aa0c8
+window.handle.unfocus.color:        #7295cf
 
 window.grip.focus:                  flat solid
-window.grip.focus.color:            #3aa0c8
+window.grip.focus.color:            #7295cf
 window.grip.unfocus:                flat solid
-window.grip.unfocus.color:          #3aa0c8
+window.grip.unfocus.color:          #7295cf
 
 window.button.focus:                parentrelative
 window.button.focus.picColor:       #b2b2b2
 window.button.unfocus:              parentrelative
-window.button.unfocus.picColor:     #3aa0c8
+window.button.unfocus.picColor:     #7295cf
 window.button.pressed:              flat solid bevel2
-window.button.pressed.color:        #051a2b
+window.button.pressed.color:        #003899
 
-window.frame.focusColor:            #3aa0c8
+window.frame.focusColor:            #7295cf
 window.frame.unfocusColor:          #b2b2b2
 
 window.justify:                     center
 
-borderColor:                        #3aa0c8
+borderColor:                        #7295cf
 
 borderWidth:                        1
 bevelWidth:                         1

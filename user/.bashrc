@@ -1,4 +1,4 @@
-# File ~/.bashrc
+# /etc/skel/.bashrc
 #
 # This file is sourced by all *interactive* bash shells on startup,
 # including some apparently interactive shells such as scp and rcp
@@ -24,4 +24,4 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[32m'
 
-export EDITOR='/usr/bin/vim'
+export EDITOR=vim

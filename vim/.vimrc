@@ -22,6 +22,7 @@ set number
 "Set options for LaTeX
  set grepprg=grep\ -nH\ $*
  let g:tex_flavor='latex'
+ let g:Imap_FreezeImap=1
 
 "Set interactive bash mode (needed in order to recognize aliases) 
 set shell=/bin/bash\ -l
@@ -44,23 +45,8 @@ map <F9> :make<Return>:copen<Return><Return>
 map <F10> :cprevious<Return>
 map <F11> :cnext<Return>
 
-"If you would like to manually place cursors by moving your cursor above each location and pressing a keybinding, set the keybinding like so, setting {keys} as desired:
-nnoremap <c-LeftMouse> :<c-u>call MultiCursorPlaceCursor()<cr>
-
-"To actually utilize these manually placed cursors you will need to call another mapping:
-nnoremap <c-i> :<c-u>call MultiCursorManual()<cr>
-
-"If you would like to cancel manually placed cursors without utilizing them:
-nnoremap <c-w> :<c-u>call MultiCursorRemoveCursors()<cr>
-
-"You can also create cursors from visual mode:
-xnoremap <c-LeftMouse> :<c-u>call MultiCursorVisual()<cr>
-
-"Finally, you should set a keybinding to stop using multiple cursors (and fall back to the normal single cursor) like so:
-let g:multicursor_quit = "<c-u>"
-
-
-autocmd FileType c,cpp,html,css,javascript,php,java,ruby,python,perl,sh,xml let g:SuperTabDisabled=0
+autocmd FileType c,cpp,html,css,javascript,php,java,ruby,python,perl,sh,xml,tex,asm let g:SuperTabDisabled=0
+autocmd FileType asm set ft=nasm
 
 colorscheme mycolors "~/.vim/colors/mycolors.vim
 

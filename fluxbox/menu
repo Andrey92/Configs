@@ -24,6 +24,12 @@
 			[exec]	 (Irssi) {urxvt -geometry 120x40 -e irssi}
 			[exec]	 (Skype) {skype}
 		[end]
+		[submenu] (Dev)
+			[exec] (Vim) {urxvt -geometry 100x30 -e vim}
+			[exec] (Eclipse) {/usr/local/bin/eclipse/eclipse}
+			[exec] (Matlab) {matlab}
+			[exec] (ISE WebPack) {/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise}
+		[end]
 		[submenu] (Multimedia)
 			[exec] (Moc) {urxvt -geometry 100x25 -e mocp}
 			[exec] (Mixer) {urxvt -geometry 100x30 -e alsamixer}
@@ -39,10 +45,8 @@
 			[exec] (Impress) {/usr/lib64/openoffice/program/simpress}
 		[end]
 		[submenu] (Utils)
-			[exec] (Eclipse) {/usr/local/bin/eclipse/eclipse}
 			[exec] (VirtualBox) {VirtualBox}
 			[exec] (TeamViewer) {~/.teamviewer7/teamviewer7/teamviewer}
-			[exec] (Matlab) {matlab}
 			[exec] (DropBox) {dropbox}
 			[exec] (GQview) {gqview}
 			[exec] (Gimp) {gimp}

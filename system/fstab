@@ -1,4 +1,4 @@
-# File /etc/fstab
+# /etc/fstab: static file system information.
 #
 # noatime turns off atimes for increased performance (atimes normally aren't 
 # needed); notail increases performance of ReiserFS (at the expense of storage 
@@ -17,10 +17,11 @@
 /dev/sda4			/		ext4		noatime				1 1
 /dev/sda3			/windows	ntfs-3g		auto,rw,locale=it_IT.utf8	0 0
 /dev/cdrom1			/mnt/cdrom	auto		noauto,ro,user			0 0
-/dev/sdb			/mnt/usb	auto		noauto,rw,user			0 0
-/dev/sdb1			/mnt/usb2	auto		noauto,rw,user			0 0
-/dev/sdc			/mnt/usb3	auto		noauto,rw,user			0 0
-/dev/sdc1			/mnt/usb4	auto		noauto,rw,user			0 0
+/dev/sdb1			/mnt/usb	auto		noauto,rw,user			0 0
+/dev/sdb2			/mnt/usb2	auto		noauto,rw,user			0 0
+/dev/sdc1			/mnt/usb3	auto		noauto,rw,user			0 0
+/dev/sdc2			/mnt/usb4	auto		noauto,rw,user			0 0
+/dev/mmcblk0p1			/mnt/sd		auto		noauto,rw,user			0 0
 192.168.1.2:/home/andrey	/mnt/desktop	nfs		noauto,rw,user			0 0
 
 tmpfs				/dev/shm	tmpfs		nodev,nosuid,noexec		0 0

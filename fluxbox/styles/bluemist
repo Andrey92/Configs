@@ -1,0 +1,97 @@
+# background
+#background: centered|aspect|tiled|fullscreen|random|solid|gradient |mod|none
+#background.pixmap:
+#background.color:
+#background.colorTo:
+#background.modX:
+#background.modY:
+
+background: aspect
+background.pixmap: ~/.fluxbox/backgrounds/bluemist.jpg
+
+toolbar:                            raised solid
+toolbar.color:                      #192451
+toolbar.height:			    21
+
+toolbar.button:                     parentrelative
+toolbar.button.picColor:            #476d91
+toolbar.button.pressed:             raised solid
+toolbar.button.pressed.color:       #192451
+
+toolbar.label:                      sunken
+toolbar.label.color:                #192451
+toolbar.label.textColor:            #b2b2b2
+
+toolbar.windowLabel:                sunken
+toolbar.windowLabel.color:          #192451
+toolbar.windowLabel.textColor:      #b2b2b2
+
+toolbar.clock:                      sunken
+toolbar.clock.color:                #192451
+toolbar.clock.textColor:            #b2b2b2
+
+menu.title:                         flat
+menu.title.color:                   #192451
+menu.title.textColor:               #b2b2b2
+menu.title.justify:                 center
+
+menu.frame:                         flat solid bevel1
+menu.frame.color:                   #192451
+menu.frame.textColor:               #b2b2b2
+menu.frame.justify:                 left
+
+menu.hilite:                        flat solid bevel1
+menu.hilite.textColor:              #ffffff
+menu.hilite.color:                  #476d91
+
+menu.bullet:                        triangle
+menu.bullet.position:               right
+
+window.title.height:		    22
+window.title.focus:                 flat solid
+window.title.focus.color:           #192451
+window.title.unfocus:               flat solid
+window.title.unfocus.color:         #192451
+
+window.label.focus:                 flat
+window.label.focus.color:           #192451
+window.label.focus.textColor:       #b2b2b2
+window.label.unfocus:               flat solid
+window.label.unfocus.color:         #192451
+window.label.unfocus.textColor:     #476d91
+
+window.handle.focus:                flat solid
+window.handle.focus.color:          #476d91
+window.handle.unfocus:              flat solid
+window.handle.unfocus.color:        #476d91
+
+window.grip.focus:                  flat solid
+window.grip.focus.color:            #476d91
+window.grip.unfocus:                flat solid
+window.grip.unfocus.color:          #476d91
+
+window.button.focus:                parentrelative
+window.button.focus.picColor:       #b2b2b2
+window.button.unfocus:              parentrelative
+window.button.unfocus.picColor:     #476d91
+window.button.pressed:              flat solid bevel2
+window.button.pressed.color:        #192451
+
+window.frame.focusColor:            #476d91
+window.frame.unfocusColor:          #b2b2b2
+
+window.justify:                     center
+
+borderColor:                        #476d91
+
+borderWidth:                        1
+bevelWidth:                         1
+handleWidth:                        0
+
+menu.frame.font:			dejavusansmono-10
+menu.title.font:			dejavusansmono-10:bold
+toolbar.clock.font:			dejavusansmono-10
+toolbar.workspace.font:			dejavusansmono-10
+toolbar.iconbar.focused.font:		dejavusansmono-10:bold
+toolbar.iconbar.unfocused.font:		dejavusansmono-10
+window.font:				dejavusansmono-10

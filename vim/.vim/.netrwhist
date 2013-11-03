@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/windows/Users/Andrea/Desktop/Andrea/Sviluppo/Programmazione/C++/Progetti/matdll/src'
-let g:netrw_dirhist_2='/windows/Users/Andrea/Desktop/Andrea/Sviluppo/Programmazione/C++/Progetti'
-let g:netrw_dirhist_3='/windows/Users/Andrea/Desktop/Andrea/Sviluppo/Programmazione/C++/Progetti/Equazione2Grado'
-let g:netrw_dirhist_4='/windows/Users/Andrea/Desktop/Andrea/Sviluppo/Programmazione/C++/Progetti/Equazione2Grado/src'
-let g:netrw_dirhist_5='/home/andrey/.ssh'
