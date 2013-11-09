@@ -18,11 +18,16 @@ set mouse=a
 "    no / means that the search history will be saved
 set viminfo='0,:0,f0,/0 "~/.viminfo
 set number
+"Set tabstop shiftwidth softtabstop
+"default: 8
+"set ts=4 sw=4 sts=4
+nnoremap <F4> :set ts=4 sw=4 sts=4<CR>
+nnoremap <F8> :set ts=8 sw=8 sts=8<CR>
 
 "Set options for LaTeX
- set grepprg=grep\ -nH\ $*
- let g:tex_flavor='latex'
- let g:Imap_FreezeImap=1
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+let g:Imap_FreezeImap=1
 
 "Set interactive bash mode (needed in order to recognize aliases) 
 set shell=/bin/bash\ -l
@@ -57,3 +62,11 @@ let g:SuperTabNoCompleteBefore = ['[a-zA-Z]']
 "let g:SuperTabCompletionContexts = ['s:ContextText']
 "let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 "let g:SuperTabContextDiscoverDiscovery = ['&completefunc:<c-x><c-u>', '&omnifunc:<c-x><c-o>']
+
+"Folding shortcuts
+inoremap <F12> <C-O>zR
+nnoremap <F12> zR
+onoremap <F12> <C-C>zR
+vnoremap <F12> zf
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
