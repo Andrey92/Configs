@@ -1,16 +1,22 @@
 #!/bin/bash
 
 # Check for updates in my config files and print differences
+dif=0
 
 check() {
-	echo =================================================================================
-	echo $1 - $2
-	echo =================================================================================
+	name="$1 - $2"
+	let nspaces=76-${#name}
+	spaces=$(printf "%-${nspaces}s" " ")
+	echo ╔══════════════════════════════════════════════════════════════════════════════╗
+	echo "║ $name$spaces ║"
+	echo ╚══════════════════════════════════════════════════════════════════════════════╝
 	diff -r $1 $2
 	if [ $? -eq 0 ]; then
 		echo -e "\t"
 		echo Already up-to-date.
 		echo -e "\n"
+	else
+		dif=1
 	fi
 }
 
@@ -65,3 +71,12 @@ check ~/.vimrc vim/.vimrc
 check /etc/X11/xorg.conf xorg/xorg.conf
 check ~/.Xdefaults xorg/.Xdefaults
 check ~/.xinitrc xorg/.xinitrc
+
+#Other
+check ~/.asoundrc other/.asoundrc
+
+if [ $dif -eq 0 ]; then
+	echo ╔═══════════════════════════╗
+	echo ║ All files are up-to-date. ║
+	echo ╚═══════════════════════════╝
+fi

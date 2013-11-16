@@ -29,6 +29,7 @@
 			[exec] (Eclipse) {/usr/local/bin/eclipse/eclipse}
 			[exec] (Matlab) {matlab}
 			[exec] (ISE WebPack) {/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise}
+			[exec] (OMNeT++) {/opt/OMNeT/bin/omnetpp}
 		[end]
 		[submenu] (Multimedia)
 			[exec] (Moc) {urxvt -geometry 100x25 -e mocp}

@@ -74,6 +74,7 @@ Mod1 w	:ExecCommand VirtualBox
 Mod1 a	:ExecCommand urxvt -geometry 100x30 -e alsamixer
 Mod1 l	:ExecCommand matlab
 Mod1 x	:ExecCommand /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise
+Mod1 o	:ExecCommand /opt/OMNeT/bin/omnetpp
 Print	:ExecCommand scrot
 
 # volume settings, using common keycodes

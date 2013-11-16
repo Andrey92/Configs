@@ -6,6 +6,7 @@ alias writer='/usr/lib64/openoffice/program/swriter'
 alias calc='/usr/lib64/openoffice/program/scalc'
 alias math='/usr/lib64/openoffice/program/smath'
 alias impress='/usr/lib64/openoffice/program/simpress'
+alias omnetpp='/opt/OMNeT/bin/omnetpp'
 
 alias poweroff='sudo /sbin/poweroff'
 alias reboot='sudo /sbin/reboot'
@@ -27,6 +28,7 @@ alias ...='cd ../..'
 alias ll='ls -la'
 alias child='urxvt -geometry 80x25 & '
 
+export TCL_LIBRARY=/usr/lib64/tcl8.5
 export CLASSPATH=.:./bin:/usr/lib64/jvm/oracle-jdk-bin-1.7/jre/lib/jfxrt.jar:/home/andrey/Dev/JRisk/jrisk/server/lib/mysql-connector-java-5.1.24-bin.jar
 alias javacbin='
 if [ ! -e ./bin ]
