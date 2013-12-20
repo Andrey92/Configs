@@ -26,8 +26,8 @@
 		[end]
 		[submenu] (Dev)
 			[exec] (Vim) {urxvt -geometry 100x30 -e vim}
-			[exec] (Eclipse) {/usr/local/bin/eclipse/eclipse}
-			[exec] (Matlab) {matlab}
+			[exec] (Eclipse) {/opt/eclipse/eclipse}
+			[exec] (Matlab) {/opt/MATLAB/R2013a/bin/matlab}
 			[exec] (ISE WebPack) {/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise}
 			[exec] (OMNeT++) {/opt/OMNeT/bin/omnetpp}
 		[end]

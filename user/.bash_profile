@@ -6,7 +6,9 @@ alias writer='/usr/lib64/openoffice/program/swriter'
 alias calc='/usr/lib64/openoffice/program/scalc'
 alias math='/usr/lib64/openoffice/program/smath'
 alias impress='/usr/lib64/openoffice/program/simpress'
+alias matlab='/opt/MATLAB/R2013a/bin/matlab'
 alias omnetpp='/opt/OMNeT/bin/omnetpp'
+alias eclipse='/opt/eclipse/eclipse'
 
 alias poweroff='sudo /sbin/poweroff'
 alias reboot='sudo /sbin/reboot'
@@ -37,7 +39,6 @@ then
 fi
 javac -d ./bin'
 alias apidocs='firefox ~/Dev/UniLab/POO/docs/api/index.html'
-alias eclipse='/usr/local/bin/eclipse/eclipse'
 
 alias makenasm=nasm_compile
 
@@ -56,7 +57,7 @@ rm ~/MOL_Properties.properties'
 #alias minecraft_server='java -Xmx1024M -Xms1024M -jar ~/.minecraft/minecraft_server/minecraft_server.jar'
 
 alias wiunical='~/.wiunical/UNICAL_Campus_Access.sh'
-alias martensson_wifi='~/.wiunical/Martensson_WiFi.sh'
+#alias martensson_wifi='~/.wiunical/Martensson_WiFi.sh'
 
 alias startx='startx &> /dev/null'
 

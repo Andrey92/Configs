@@ -64,7 +64,7 @@ Mod1 u	:Exec urxvt -geometry 80x25
 Mod1 r	:Exec urxvt -geometry 80x25 -e su -
 Mod1 f	:Exec firefox
 Mod1 t	:Exec thunderbird
-Mod1 e	:Exec /usr/local/bin/eclipse/eclipse
+Mod1 e	:Exec /opt/eclipse/eclipse
 Mod1 g	:Exec ~/.graph/graph.sh
 Mod1 d	:Exec dropbox
 Mod1 i	:ExecCommand urxvt -geometry 120x35 -e irssi
@@ -72,7 +72,7 @@ Mod1 v	:ExecCommand urxvt -e vim
 Mod1 m	:ExecCommand urxvt -geometry 100x25 -e mocp
 Mod1 w	:ExecCommand VirtualBox
 Mod1 a	:ExecCommand urxvt -geometry 100x30 -e alsamixer
-Mod1 l	:ExecCommand matlab
+Mod1 l	:ExecCommand /opt/MATLAB/R2013a/bin/matlab
 Mod1 x	:ExecCommand /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise
 Mod1 o	:ExecCommand /opt/OMNeT/bin/omnetpp
 Print	:ExecCommand scrot
