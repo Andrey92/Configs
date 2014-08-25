@@ -2,6 +2,12 @@
 
 # Check for updates in my config files and print differences
 dif=0
+w=0
+
+if [ "$1" == "-u" ]; then
+	w=1
+	echo "Update mode: all files on the repo will be replaced with the new ones"
+fi
 
 check() {
 	name="$1 - $2"
@@ -17,6 +23,10 @@ check() {
 		echo -e "\n"
 	else
 		dif=1
+		if [ $w -eq 1 ]; then
+			rm -R $2
+			cp -R $1 $2
+		fi
 	fi
 }
 
@@ -79,4 +89,8 @@ if [ $dif -eq 0 ]; then
 	echo ╔═══════════════════════════╗
 	echo ║ All files are up-to-date. ║
 	echo ╚═══════════════════════════╝
+elif [ $w -eq 1 ]; then
+	echo ╔══════════════════════════════╗
+	echo ║ All files have been updated. ║
+	echo ╚══════════════════════════════╝
 fi

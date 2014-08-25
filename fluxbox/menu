@@ -26,16 +26,17 @@
 		[end]
 		[submenu] (Dev)
 			[exec] (Vim) {urxvt -geometry 100x30 -e vim}
-			[exec] (Eclipse) {/opt/eclipse/eclipse}
-			[exec] (Matlab) {/opt/MATLAB/R2013a/bin/matlab}
-			[exec] (ISE WebPack) {/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise}
-			[exec] (OMNeT++) {/opt/OMNeT/bin/omnetpp}
+			[exec] (Eclipse) {eclipse}
+			[exec] (Matlab) {matlab}
+			[exec] (Maple) {maple}
+			[exec] (ISE WebPack) {ise}
+			[exec] (OMNeT++) {omnetpp}
 		[end]
 		[submenu] (Multimedia)
 			[exec] (Moc) {urxvt -geometry 100x25 -e mocp}
 			[exec] (Mixer) {urxvt -geometry 100x30 -e alsamixer}
 			[exec] (Equal) {urxvt -geometry 100x30 -e alsamixer -D equal}
-			[exec] (Minecraft) {echo "installation_dir=/home/andrey/.minecraft" > ~/MOL_Properties.properties && java -jar ~/.minecraft/MC_Open_Launcher.jar && rm ~/MOL_Properties.properties}
+			[exec] (Minecraft) {echo "installation_dir=/home/andrey/.minecraft" > ~/MOL_Properties.properties && java -jar ~/.minecraft/minecraft.jar && rm ~/MOL_Properties.properties}
 			[exec] (DVDRip) {dvdrip}
  		[end]
 		[submenu] (Office)

@@ -6,9 +6,7 @@ alias writer='/usr/lib64/openoffice/program/swriter'
 alias calc='/usr/lib64/openoffice/program/scalc'
 alias math='/usr/lib64/openoffice/program/smath'
 alias impress='/usr/lib64/openoffice/program/simpress'
-alias matlab='/opt/MATLAB/R2013a/bin/matlab'
-alias omnetpp='/opt/OMNeT/bin/omnetpp'
-alias eclipse='/opt/eclipse/eclipse'
+alias umlet='~/.umlet/umlet.sh'
 
 alias poweroff='sudo /sbin/poweroff'
 alias reboot='sudo /sbin/reboot'
@@ -30,8 +28,10 @@ alias ...='cd ../..'
 alias ll='ls -la'
 alias child='urxvt -geometry 80x25 & '
 
+alias g++='g++ -std=c++0x'
+
 export TCL_LIBRARY=/usr/lib64/tcl8.5
-export CLASSPATH=.:./bin:/usr/lib64/jvm/oracle-jdk-bin-1.7/jre/lib/jfxrt.jar:/home/andrey/Dev/JRisk/jrisk/server/lib/mysql-connector-java-5.1.24-bin.jar
+export CLASSPATH=.:./bin:/home/andrey/Dev/JRisk/jrisk/server/lib/mysql-connector-java-5.1.24-bin.jar
 alias javacbin='
 if [ ! -e ./bin ]
 then
@@ -39,6 +39,8 @@ then
 fi
 javac -d ./bin'
 alias apidocs='firefox ~/Dev/UniLab/POO/docs/api/index.html'
+
+export PYTHONSTARTUP="/home/andrey/.pythonrc.py"
 
 alias makenasm=nasm_compile
 
@@ -48,11 +50,11 @@ nasm_compile() {
 	rm ${1%.*}.o
 }
 
-export LD_LIBRARY_PATH=/opt/oracle-jdk-bin-1.7.0.3/jre/lib/amd64
+export LD_LIBRARY_PATH=/opt/oracle-jdk-bin-1.8.0.5/jre/lib/amd64
 
 alias minecraft='
 echo "installation_dir=/home/andrey/.minecraft" > ~/MOL_Properties.properties
-java -jar ~/.minecraft/MC_Open_Launcher.jar
+java -jar ~/.minecraft/minecraft.jar
 rm ~/MOL_Properties.properties'
 #alias minecraft_server='java -Xmx1024M -Xms1024M -jar ~/.minecraft/minecraft_server/minecraft_server.jar'
 
@@ -68,11 +70,7 @@ if [ $? -eq 0 ] ; then
 else
 	cd ~/
 	umount /mnt/usb &> /dev/null
-	if [ $? -eq 0 ] ; then
-		echo "È possibile rimuovere la periferica."
-	else
-		echo "Impossibile montare/smontare il disco rimovibile."
-	fi
+	Result $?
 fi'
 
 alias usb2='
@@ -161,4 +159,12 @@ fi'
 Show() {
 	cd $1
 	ls -a $1 
+}
+
+Result() {
+	if [ $1 -eq 0 ] ; then
+		echo "È possibile rimuovere la periferica."
+	else
+		echo "Impossibile montare/smontare il disco rimovibile."
+	fi
 }

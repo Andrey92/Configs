@@ -16,7 +16,7 @@ let s:added_lines = []
 let s:add_methods = []
 
 exec "rubyf ".g:vjde_install_path."/vjde/vjde_template.rb"
-ruby Vjde::VjdeTemplateManager.load_all(VIM::evaluate('g:vjde_install_path'))
+"ruby Vjde::VjdeTemplateManager.load_all(VIM::evaluate('g:vjde_install_path'))
 function! VjdeNewClass(type,...) "{{{2
     let pkg=''
     let cn =''
