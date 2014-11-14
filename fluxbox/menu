@@ -23,6 +23,7 @@
 			[exec]   (Thunderbird) {thunderbird} 
 			[exec]	 (Irssi) {urxvt -geometry 120x40 -e irssi}
 			[exec]	 (Skype) {skype}
+			[exec]	 (RSSGuard) {rssguard}
 		[end]
 		[submenu] (Dev)
 			[exec] (Vim) {urxvt -geometry 100x30 -e vim}

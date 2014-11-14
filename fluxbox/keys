@@ -73,6 +73,7 @@ Mod1 l	:ExecCommand /opt/MATLAB/R2013a/bin/matlab
 Mod1 x	:ExecCommand /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise
 Mod1 o	:ExecCommand /opt/OMNeT/bin/omnetpp
 Mod1 u	:ExecCommand ~/.umlet/umlet.sh
+Mod1 n	:ExecCommand rssguard
 Print	:ExecCommand scrot
 
 # volume settings, using common keycodes
