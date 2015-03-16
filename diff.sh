@@ -66,6 +66,7 @@ check ~/.moc/darkblue moc/darkblue
 
 # System
 check /etc/fstab system/fstab
+check /boot/grub/grub.conf system/grub.conf
 check /etc/apache2/httpd.conf system/httpd.conf
 check /usr/src/linux/.config system/kernel.conf
 check /etc/make.conf system/make.conf
