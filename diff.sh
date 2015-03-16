@@ -4,6 +4,16 @@
 dif=0
 w=0
 
+if [ "$1" == "-h" ]; then
+	echo "Usage: $0 [options]"
+	echo ""
+	echo "Options:"
+	echo "	-u: update mode, replaces old files with the new ones"
+	echo ""
+	echo "Author: Andrea Genuise"
+	exit
+fi
+
 if [ "$1" == "-u" ]; then
 	w=1
 	echo "Update mode: all files on the repo will be replaced with the new ones"
