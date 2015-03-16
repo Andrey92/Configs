@@ -28,6 +28,11 @@ alias ...='cd ../..'
 alias ll='ls -la'
 alias child='urxvt -geometry 80x25 & '
 
+alias cutvideo='__cutvideo'
+__cutvideo() {
+	mencoder -ss $1 -endpos $2 -oac pcm -ovc copy $3 -o $4
+}
+
 alias g++='g++ -std=c++0x'
 
 export TCL_LIBRARY=/usr/lib64/tcl8.5
@@ -49,6 +54,10 @@ nasm_compile() {
 	ld -m elf_i386 ${1%.*}.o -o ${1%.*}
 	rm ${1%.*}.o
 }
+
+#For Xilinx EDK
+export XILINX=/opt/Xilinx/14.7/ISE_DS/ISE
+
 
 export LD_LIBRARY_PATH=/opt/oracle-jdk-bin-1.8.0.5/jre/lib/amd64
 
@@ -80,11 +89,7 @@ if [ $? -eq 0 ] ; then
 else
 	cd ~/
 	umount /mnt/usb2 &> /dev/null
-	if [ $? -eq 0 ] ; then
-		echo "È possibile rimuovere la periferica."
-	else
-		echo "Impossibile montare/smontare il disco rimovibile."
-	fi
+	Result $?
 fi'
 
 alias usb3='
@@ -94,11 +99,7 @@ if [ $? -eq 0 ] ; then
 else
 	cd ~/
 	umount /mnt/usb3 &> /dev/null
-	if [ $? -eq 0 ] ; then
-		echo "È possibile rimuovere la periferica."
-	else
-		echo "Impossibile montare/smontare il disco rimovibile."
-	fi
+	Result $?
 fi'
 
 alias usb4='
@@ -108,11 +109,7 @@ if [ $? -eq 0 ] ; then
 else
 	cd ~/
 	umount /mnt/usb4 &> /dev/null
-	if [ $? -eq 0 ] ; then
-		echo "È possibile rimuovere la periferica."
-	else
-		echo "Impossibile montare/smontare il disco rimovibile."
-	fi
+	Result $?
 fi'
 
 alias nfs='mount /mnt/desktop &> /dev/null
