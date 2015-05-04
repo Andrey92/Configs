@@ -13,7 +13,7 @@ alias reboot='sudo /sbin/reboot'
 alias pppd='sudo /usr/sbin/pppd'
 
 alias performance='
-echo 15 > /sys/class/backlight/acpi_video1/brightness
+echo 15 > /sys/class/backlight/acpi_video0/brightness
 cpufreq-set -c 0 -g performance
 cpufreq-set -c 1 -g performance
 cpufreq-set -c 2 -g performance
@@ -28,9 +28,16 @@ alias ...='cd ../..'
 alias ll='ls -la'
 alias child='urxvt -geometry 80x25 & '
 
-alias cutvideo='__cutvideo'
-__cutvideo() {
+cutvideo() {
 	mencoder -ss $1 -endpos $2 -oac pcm -ovc copy $3 -o $4
+}
+
+grabscreen() {
+	ffmpeg -y -f x11grab -video_size $(xdpyinfo | grep dimensions | awk '{ print $2 }') -framerate 25 -i :0.0 -vcodec mjpeg -q:v 1 -t $1 $2 &> /dev/null
+}
+
+capture() {
+	ffmpeg -f alsa -i hw:0,0 -f video4linux2 -s 1280x1024 -r 24 -i /dev/video0 -vcodec copy -r 24 -b:v 64k -bufsize 64k -y -t $1 $2 &> /dev/null
 }
 
 alias g++='g++ -std=c++0x'
@@ -63,8 +70,9 @@ export LD_LIBRARY_PATH=/opt/oracle-jdk-bin-1.8.0.5/jre/lib/amd64
 
 alias minecraft='
 echo "installation_dir=/home/andrey/.minecraft" > ~/MOL_Properties.properties
-java -jar ~/.minecraft/minecraft.jar
+java -Dswing.systemlaf=javax.swing.plaf.nimbus.NimbusLookAndFeel -jar ~/.minecraft/minecraft.jar
 rm ~/MOL_Properties.properties'
+# -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=9050
 #alias minecraft_server='java -Xmx1024M -Xms1024M -jar ~/.minecraft/minecraft_server/minecraft_server.jar'
 
 alias wiunical='~/.wiunical/UNICAL_Campus_Access.sh'

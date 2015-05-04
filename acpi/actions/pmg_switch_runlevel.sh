@@ -22,7 +22,7 @@ then
 #  if [[ "$(</var/lib/init.d/softlevel)" != "${RUNLEVEL_AC}" ]]
 #  then
 	logger "ACPI: Switching to ${RUNLEVEL_AC} runlevel"
-		echo 15 > /sys/class/backlight/acpi_video1/brightness
+		echo 15 > /sys/class/backlight/acpi_video0/brightness
 		cpufreq-set -c 0 -g performance
 		cpufreq-set -c 1 -g performance
 		cpufreq-set -c 2 -g performance
@@ -36,7 +36,7 @@ then
 #then
 else
         logger "ACPI: Switching to ${RUNLEVEL_BATTERY} runlevel"
-	echo 7 > /sys/class/backlight/acpi_video1/brightness
+	echo 7 > /sys/class/backlight/acpi_video0/brightness
 	cpufreq-set -c 0 -g powersave
 	cpufreq-set -c 1 -g powersave
 	cpufreq-set -c 2 -g powersave

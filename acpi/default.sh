@@ -61,10 +61,22 @@ case "$group" in
 		case "$action" in
 			brightnessdown)
 				logger "ACPI: Brightness down"
+				brightness=$(cat /sys/class/backlight/acpi_video0/brightness)
+				if [ "$brightness" != "0" ]
+				then
+					let brightness=$brightness-1
+				fi
+				echo $brightness > /sys/class/backlight/acpi_video0/brightness
 			;;
 
 			brightnessup)
 				logger "ACPI: Brightness up"
+				brightness=$(cat /sys/class/backlight/acpi_video0/brightness)
+				if [ "$brightness" != "15" ]
+				then
+					let brightness=$brightness+1
+				fi
+				echo $brightness > /sys/class/backlight/acpi_video0/brightness
 			;;
 
 			*) log_unhandled $* ;;

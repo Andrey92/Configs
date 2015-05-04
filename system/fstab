@@ -15,9 +15,9 @@
 
 # NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
 /dev/sdb1			/		ext4		noatime				0 1
-/dev/sda4			/data		ext4		auto,rw				0 0
-/dev/sda3			/windows	ntfs-3g		auto,rw,locale=it_IT.utf8	0 0
-/dev/cdrom1			/mnt/cdrom	auto		noauto,ro,user			0 0
+/dev/sda1			/data		ext4		auto,rw				0 0
+/dev/sda2			/windows	ntfs-3g		auto,rw,locale=it_IT.utf8	0 0
+/dev/sr0			/mnt/cdrom	auto		noauto,ro,user			0 0
 /dev/sdc1			/mnt/usb	auto		noauto,rw,user			0 0
 /dev/sdc2			/mnt/usb2	auto		noauto,rw,user			0 0
 /dev/sdd1			/mnt/usb3	auto		noauto,rw,user			0 0
