@@ -20,4 +20,6 @@
 
 # snd-seq-oss snd-seq-device snd-seq-midi-event snd-seq-dummy snd-seq snd-pcm-oss snd-mixer-oss snd-hrtimer snd-hwdep snd snd-timer snd-pcm snd-page-alloc snd-hda-codec snd-hda-codec-analog snd-hda-codec-hdmi snd-hda-codec-realtek
 
-modules="i915 wmi dell-wmi dell-laptop mac80211 cfg80211 xt_mark snd-hda-intel soundcore vboxdrv vboxnetflt vboxnetadp bsd_comp ppp_async ppp_deflate ppp_synctty"
+#  wmi dell-wmi dell-laptop
+
+modules="i915 mac80211 cfg80211 xt_mark snd-hda-intel soundcore vboxdrv vboxnetflt vboxnetadp bsd_comp ppp_async ppp_deflate ppp_synctty xhci-hcd xhci-hcd xhci-hcd xhci-hcd xhci-hcd xhci-hcd xhci-hcd xhci-hcd"

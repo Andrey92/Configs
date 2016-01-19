@@ -35,6 +35,7 @@
 		[end]
 		[submenu] (Multimedia)
 			[exec] (Moc) {urxvt -geometry 100x25 -e mocp}
+			[exec] (Spotify) {spotify}
 			[exec] (Mixer) {urxvt -geometry 100x30 -e alsamixer}
 			[exec] (Equal) {urxvt -geometry 100x30 -e alsamixer -D equal}
 			[exec] (Minecraft) {echo "installation_dir=/home/andrey/.minecraft" > ~/MOL_Properties.properties && java -jar ~/.minecraft/minecraft.jar && rm ~/MOL_Properties.properties}
@@ -51,6 +52,7 @@
 			[exec] (VirtualBox) {VirtualBox}
 			[exec] (TeamViewer) {~/.teamviewer7/teamviewer7/teamviewer}
 			[exec] (DropBox) {dropbox}
+			[exec] (Copy) {~/.copy/x86_64/CopyAgent}
 			[exec] (GQview) {gqview}
 			[exec] (Gimp) {gimp}
 			[exec] (Graphing) {~/.graph/graph.sh}

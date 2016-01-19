@@ -1,4 +1,31 @@
 set nocp
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 filetype plugin on
 filetype indent on
@@ -49,7 +76,9 @@ set shellpipe=>%s\ 2>&1
 
 "Tips for Java programming
 autocmd Filetype java set cfu=VjdeCompletionFun
-"autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+set completeopt-=preview
+"autocmd CompleteDone * pclose
 ":inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P>
 iab psvm public static void main(String[]args) { }<UP><END><BS><BS>
 iab eqls public boolean equals(Object o) {<CR>if (!(o instanceof Type)) return false;<CR>if (o == this) return true;<CR>Type t = (Type)o;<CR>return ;<CR>}<UP>
@@ -63,15 +92,22 @@ map <F9> :make<Return>:copen<Return><Return>
 map <F10> :cprevious<Return>
 map <F11> :cnext<Return>
 
+"autocmd FileType html,css,javascript,php,java,ruby,perl,sh,xml,tex,asm let g:loaded_youcompleteme = 1
 autocmd FileType c,cpp,html,css,javascript,php,java,ruby,python,perl,sh,xml,tex,asm let g:SuperTabDisabled=0
 autocmd FileType asm set ft=nasm
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'h': 1, 'python': 1 }
+let g:ycm_filetype_blacklist = { 'java' : 1 }
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_min_num_of_chars_for_completion = 0
+let g:ycm_show_diagnostics_ui = 0
 
 colorscheme mycolors "~/.vim/colors/mycolors.vim
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabNoCompleteAfter = [',', '\s', '\t', ';']
 let g:SuperTabNoCompleteBefore = ['[a-zA-Z]']
-"let g:SuperTabCompletionContexts = ['s:ContextText']
-"let g:SuperTabCompletionContexts = ['s:ContextText']
-"let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
-"let g:SuperTabContextDiscoverDiscovery = ['&completefunc:<c-x><c-u>', '&omnifunc:<c-x><c-o>']
+let g:SuperTabCompletionContexts = ['s:ContextText']
+let g:SuperTabCompletionContexts = ['s:ContextText']
+let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+let g:SuperTabContextDiscoverDiscovery = ['&completefunc:<c-x><c-u>', '&omnifunc:<c-x><c-o>']

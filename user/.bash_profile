@@ -27,6 +27,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ll='ls -la'
 alias child='urxvt -geometry 80x25 & '
+alias vim='vim -p'
 
 cutvideo() {
 	mencoder -ss $1 -endpos $2 -oac pcm -ovc copy $3 -o $4
@@ -39,8 +40,12 @@ grabscreen() {
 capture() {
 	ffmpeg -f alsa -i hw:0,0 -f video4linux2 -s 1280x1024 -r 24 -i /dev/video0 -vcodec copy -r 24 -b:v 64k -bufsize 64k -y -t $1 $2 &> /dev/null
 }
-
+alias mplayer='mplayer -af scaletempo'
 alias g++='g++ -std=c++0x'
+
+# Needed for os161
+export PATH="$PATH:/home/andrey/Dev/PDS/Cabodi/os161/tools/bin"
+alias bmake='bmake -m $HOME/Dev/PDS/Cabodi/os161/tools/share/mk'
 
 export TCL_LIBRARY=/usr/lib64/tcl8.5
 export CLASSPATH=.:./bin:/home/andrey/Dev/JRisk/jrisk/server/lib/mysql-connector-java-5.1.24-bin.jar
@@ -68,6 +73,7 @@ export XILINX=/opt/Xilinx/14.7/ISE_DS/ISE
 
 export LD_LIBRARY_PATH=/opt/oracle-jdk-bin-1.8.0.5/jre/lib/amd64
 
+alias epsxe='.epsxe/epsxe'
 alias minecraft='
 echo "installation_dir=/home/andrey/.minecraft" > ~/MOL_Properties.properties
 java -Dswing.systemlaf=javax.swing.plaf.nimbus.NimbusLookAndFeel -jar ~/.minecraft/minecraft.jar

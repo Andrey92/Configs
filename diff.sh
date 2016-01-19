@@ -8,6 +8,7 @@ if [ "$1" == "-h" ]; then
 	echo "Usage: $0 [options]"
 	echo ""
 	echo "Options:"
+	echo "	-h: print this help and exit"
 	echo "	-u: update mode, replaces old files with the new ones"
 	echo ""
 	echo "Author: Andrea Genuise"

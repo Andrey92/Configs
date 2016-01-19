@@ -11,18 +11,18 @@
 # See the manpage fstab(5) for more information.
 #
 
-# <fs>				<mountpoint>	<type>		<opts>				<dump/pass>
+# <fs>				<mountpoint>	<type>		<opts>					<dump/pass>
 
 # NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
-/dev/sdb1			/		ext4		noatime				0 1
-/dev/sda1			/data		ext4		auto,rw				0 0
-/dev/sda2			/windows	ntfs-3g		auto,rw,locale=it_IT.utf8	0 0
-/dev/sr0			/mnt/cdrom	auto		noauto,ro,user			0 0
-/dev/sdc1			/mnt/usb	auto		noauto,rw,user			0 0
-/dev/sdc2			/mnt/usb2	auto		noauto,rw,user			0 0
-/dev/sdd1			/mnt/usb3	auto		noauto,rw,user			0 0
-/dev/sdd2			/mnt/usb4	auto		noauto,rw,user			0 0
-/dev/mmcblk0p1			/mnt/sd		auto		noauto,rw,user			0 0
-192.168.1.2:/home/andrey	/mnt/desktop	nfs		noauto,rw,user			0 0
+/dev/sdb1			/		ext4		noatime					0 1
+/dev/sda1			/data		ext4		auto,rw					0 0
+/dev/sda2			/windows	ntfs-3g		auto,nofail,rw,locale=it_IT.utf8	0 0
+/dev/sr0			/mnt/cdrom	auto		noauto,ro,user				0 0
+/dev/sdc1			/mnt/usb	auto		noauto,rw,user				0 0
+/dev/sdc2			/mnt/usb2	auto		noauto,rw,user				0 0
+/dev/sdd1			/mnt/usb3	auto		noauto,rw,user				0 0
+/dev/sdd2			/mnt/usb4	auto		noauto,rw,user				0 0
+/dev/mmcblk0p1			/mnt/sd		auto		noauto,rw,user				0 0
+192.168.1.2:/home/andrey	/mnt/desktop	nfs		noauto,rw,user				0 0
 
-tmpfs				/dev/shm	tmpfs		nodev,nosuid,noexec		0 0
+tmpfs				/dev/shm	tmpfs		nodev,nosuid,noexec			0 0
