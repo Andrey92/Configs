@@ -28,6 +28,7 @@
 		[submenu] (Dev)
 			[exec] (Vim) {urxvt -geometry 100x30 -e vim}
 			[exec] (Eclipse) {eclipse}
+			[exec] (Android Studio) {android-studio}
 			[exec] (Matlab) {matlab}
 			[exec] (Maple) {maple}
 			[exec] (ISE WebPack) {ise}

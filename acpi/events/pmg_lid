@@ -1,2 +1,2 @@
 event=button/lid
-action=/etc/acpi/actions/pmg_lid.sh
+action=/etc/acpi/actions/pmg_lid.sh %e

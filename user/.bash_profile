@@ -30,16 +30,29 @@ alias child='urxvt -geometry 80x25 & '
 alias vim='vim -p'
 
 cutvideo() {
-	mencoder -ss $1 -endpos $2 -oac pcm -ovc copy $3 -o $4
+	if [ "$#" -ne 4 ]; then
+		echo "Usage: cutvideo <start> <length> <input> <output>"
+	else
+		mencoder -ss $1 -endpos $2 -oac pcm -ovc copy $3 -o $4
+	fi
 }
 
 grabscreen() {
-	ffmpeg -y -f x11grab -video_size $(xdpyinfo | grep dimensions | awk '{ print $2 }') -framerate 25 -i :0.0 -vcodec mjpeg -q:v 1 -t $1 $2 &> /dev/null
+	if [ "$#" -ne 2 ]; then
+		echo "Usage: grabscreen <time> <output>"
+	else
+		ffmpeg -y -f x11grab -video_size $(xdpyinfo | grep dimensions | awk '{ print $2 }') -framerate 25 -i :0.0 -vcodec mjpeg -q:v 1 -t $1 $2 &> /dev/null
+	fi
 }
 
 capture() {
-	ffmpeg -f alsa -i hw:0,0 -f video4linux2 -s 1280x1024 -r 24 -i /dev/video0 -vcodec copy -r 24 -b:v 64k -bufsize 64k -y -t $1 $2 &> /dev/null
+	if [ "$#" -ne 2 ]; then
+		echo "Usage: capture <time> <output>"
+	else
+		ffmpeg -thread_queue_size 512 -f alsa -ar 44100 -i hw:0 -f v4l2 -s 1280x1024 -framerate 25 -i /dev/video0 -c:v mpeg4 -q:v 1 -y -t $1 $2 &> /dev/null
+	fi
 }
+
 alias mplayer='mplayer -af scaletempo'
 alias g++='g++ -std=c++0x'
 

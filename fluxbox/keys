@@ -68,9 +68,10 @@ Mod1 d	:Exec dropbox
 Mod1 s  :Exec spotify
 Mod1 i	:ExecCommand urxvt -geometry 120x35 -e irssi
 Mod1 v	:ExecCommand urxvt -e vim
-Mod1 m	:ExecCommand urxvt -geometry 100x25 -e mocp
+Mod1 p	:ExecCommand urxvt -geometry 100x25 -e mocp
+Mod1 m	:ExecCommand urxvt -geometry 100x30 -e alsamixer
 Mod1 w	:ExecCommand VirtualBox
-Mod1 a	:ExecCommand urxvt -geometry 100x30 -e alsamixer
+Mod1 a	:ExecCommand android-studio
 Mod1 l	:ExecCommand /opt/MATLAB/R2013a/bin/matlab
 Mod1 x	:ExecCommand /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/ise
 Mod1 o	:ExecCommand /opt/OMNeT/bin/omnetpp

@@ -64,6 +64,11 @@ vnoremap <F12> zf
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
+"Session options
+"Commands -> :mksession ~/mysession.vim and :source ~/mysession.vim
+set ssop-=options    " do not store global and local values in a session
+set ssop-=folds      " do not store folds
+
 "Set options for LaTeX
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
