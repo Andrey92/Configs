@@ -24,4 +24,4 @@
 
 # vboxdrv vboxnetflt vboxnetadp
 
-modules="i915 mac80211 cfg80211 xt_mark snd-hda-intel soundcore vboxdrv vboxnetflt vboxnetadp bsd_comp ppp_async ppp_deflate ppp_synctty xhci-pci"
+modules="i915 mac80211 cfg80211 xt_mark snd-hda-intel soundcore vboxdrv vboxnetflt vboxnetadp bsd_comp ppp_async ppp_deflate ppp_synctty xhci_pci"

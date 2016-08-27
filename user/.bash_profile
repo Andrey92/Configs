@@ -57,11 +57,12 @@ alias mplayer='mplayer -af scaletempo'
 alias g++='g++ -std=c++0x'
 
 # Needed for os161
-export PATH="$PATH:/home/andrey/Dev/PDS/Cabodi/os161/tools/bin"
+export PATH="$PATH:/home/andrey/Dev/PDS/Cabodi/os161/tools/bin:/home/andrey/.flctools/jflex/bin:/home/andrey/.flctools/cup/java_cup"
 alias bmake='bmake -m $HOME/Dev/PDS/Cabodi/os161/tools/share/mk'
 
 export TCL_LIBRARY=/usr/lib64/tcl8.5
-export CLASSPATH=.:./bin:/home/andrey/Dev/JRisk/jrisk/server/lib/mysql-connector-java-5.1.24-bin.jar
+export CLASSPATH=.:./bin:/home/andrey/Dev/JRisk/jrisk/server/lib/mysql-connector-java-5.1.24-bin.jar:/home/andrey/.flctools/cup
+#/usr/share/javacup/lib/javacup.jar:/usr/share/javacup/lib/javacup-runtime.jar
 alias javacbin='
 if [ ! -e ./bin ]
 then
@@ -87,12 +88,9 @@ export XILINX=/opt/Xilinx/14.7/ISE_DS/ISE
 export LD_LIBRARY_PATH=/opt/oracle-jdk-bin-1.8.0.5/jre/lib/amd64
 
 alias epsxe='.epsxe/epsxe'
-alias minecraft='
-echo "installation_dir=/home/andrey/.minecraft" > ~/MOL_Properties.properties
-java -Dswing.systemlaf=javax.swing.plaf.nimbus.NimbusLookAndFeel -jar ~/.minecraft/minecraft.jar
-rm ~/MOL_Properties.properties'
+alias minecraft='(cd /home/andrey/.minecraft && exec java -Dswing.systemlaf=javax.swing.plaf.nimbus.NimbusLookAndFeel -jar /home/andrey/.minecraft/minecraft.jar)'
 # -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=9050
-#alias minecraft_server='java -Xmx1024M -Xms1024M -jar ~/.minecraft/minecraft_server/minecraft_server.jar'
+alias minecraft_server='(cd /home/andrey/.minecraft/minecraft_server && exec java -Xmx1024M -Xms1024M -jar /home/andrey/.minecraft/minecraft_server/minecraft_server.16w33a.jar)'
 
 alias wiunical='~/.wiunical/UNICAL_Campus_Access.sh'
 #alias martensson_wifi='~/.wiunical/Martensson_WiFi.sh'

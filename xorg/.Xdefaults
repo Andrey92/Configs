@@ -28,3 +28,6 @@ urxvt.perl-ext: selection,searchable-scrollback,matcher
 urxvt.urlLauncher: firefox
 urxvt.cursorBlink: true
 urxvt.pointerBlankDelay: 0
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
