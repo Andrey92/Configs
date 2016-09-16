@@ -81,9 +81,11 @@ check ~/.bashrc user/.bashrc
 # Vim
 check ~/.vim/after vim/after
 check ~/.vim/autoload vim/autoload
+check ~/.vim/bundle vim/bundle
 check ~/.vim/colors vim/colors
 check ~/.vim/compiler vim/compiler
 check ~/.vim/doc vim/doc
+check ~/.vim/ftplugin vim/ftplugin
 check ~/.vim/plugin vim/plugin
 check ~/.vim/src vim/src
 check ~/.vim/syntax vim/syntax
