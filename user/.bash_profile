@@ -97,6 +97,10 @@ alias wiunical='~/.wiunical/UNICAL_Campus_Access.sh'
 
 alias startx='startx &> /dev/null'
 
+alias setup_nat='
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE'
+
 alias usb='
 mount /mnt/usb &> /dev/null
 if [ $? -eq 0 ] ; then
