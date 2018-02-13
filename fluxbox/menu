@@ -22,7 +22,6 @@
 			[exec]   (Firefox) {firefox}
 			[exec]   (Thunderbird) {thunderbird} 
 			[exec]	 (Irssi) {urxvt -geometry 120x40 -e irssi}
-			[exec]	 (Skype) {skype}
 			[exec]	 (RSSGuard) {rssguard}
 		[end]
 		[submenu] (Dev)
@@ -42,19 +41,12 @@
 			[exec] (Minecraft) {echo "installation_dir=/home/andrey/.minecraft" > ~/MOL_Properties.properties && java -jar ~/.minecraft/minecraft.jar && rm ~/MOL_Properties.properties}
 			[exec] (DVDRip) {dvdrip}
  		[end]
-		[submenu] (Office)
-			[exec] (Evince) {evince}
-			[exec] (Writer) {/usr/lib64/openoffice/program/swriter}
-			[exec] (Calc) {/usr/lib64/openoffice/program/scalc}
-			[exec] (Math) {/usr/lib64/openoffice/program/smath}
-			[exec] (Impress) {/usr/lib64/openoffice/program/simpress}
-		[end]
 		[submenu] (Utils)
 			[exec] (VirtualBox) {VirtualBox}
 			[exec] (TeamViewer) {~/.teamviewer7/teamviewer7/teamviewer}
 			[exec] (DropBox) {dropbox}
-			[exec] (Copy) {~/.copy/x86_64/CopyAgent}
 			[exec] (GQview) {gqview}
+			[exec] (Evince) {evince}
 			[exec] (Gimp) {gimp}
 			[exec] (Graphing) {~/.graph/graph.sh}
 		[end]
